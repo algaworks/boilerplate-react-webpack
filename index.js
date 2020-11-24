@@ -1,9 +1,13 @@
 import ReactDOM from 'react-dom'
 import React, { useState } from 'react'
 
+import './index.css'
+
 function App () {
-  return <div>
-    <h1>Hello Worlds</h1>
+  return <div className="container">
+    <h1 className="header">
+      Hello World
+    </h1>
     <Nav />
     <Button />
   </div>

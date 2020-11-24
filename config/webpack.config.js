@@ -29,13 +29,19 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css?$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
             plugins: [
-              'react-refresh/babel'
+              'react-refresh/babel',
+              '@babel/plugin-transform-modules-commonjs'
             ],
             presets: [
               [
